@@ -6,7 +6,7 @@ html, body {
 }
 
 .logo {
-    margin-top: 16px;
+    padding-top: 16px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -26,9 +26,26 @@ html, body {
 }
 
 .header-search-bar img {
+    position:absolute;
     width: 100%;
 }
 
-.header-search-bar h1 {
-    position:absolute
+
+.header-search-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.search-input {
+    border-color: transparent;
+    border-radius: 5px;
+    width: 40%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-family: Montserrat;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
