@@ -1,1 +1,24 @@
 /*Style Cart.html*/
+
+* {
+	font-family: Montserrat;
+}
+
+.cart {
+	width: 80%;
+}
+
+.cover {
+	/*width: 97.09vw;
+	height: 150vw; */
+	width: 97.09px;
+	height: 150px; 
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.checkbox {
+	vertical-align: middle;
+}
