@@ -5,6 +5,10 @@ html, body {
     font-family: Montserrat;
 }
 
+body {
+    margin-bottom: 120px;
+}
+
 .logo {
     padding-top: 16px;
     display: flex;
