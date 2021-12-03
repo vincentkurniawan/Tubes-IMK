@@ -17,6 +17,23 @@ input{
     border: 1px solid black;
     line-height: 2rem;
     padding: 1rem;
+    font-family: Montserrat;
+    font-size: medium;
+}
+
+.submit-button{
+    background-color: #1DD2A2 ;
+    border: 1px solid #1DD2A2 ;
+    text-decoration: none;
+    font-family: Montserrat;
+    color: white;
+    padding:0.5rem;
+    border-radius: 0.7rem;
+}
+
+.submit-button:hover{
+    background-color: #159674;
+    border: 1px solid #159674;
 }
 
 .half-width{
