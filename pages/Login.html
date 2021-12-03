@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../lib/font-awesome.css">
         <link rel="stylesheet" href="../style/login_style.css">
         <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../lib/font-size.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     </head>
 
@@ -17,16 +18,39 @@
             <!-- left content -->
             <div class="flex-col wh50100 w3-theme-light-green">
                 <div class="w100">
-                    <img src="../images/login_bookstack.png"/>
+                    <img src="../images/login_bookstack.png" class="wh100"/>
                 </div>
-                <div class=" flex-center">
+                <div class="flex-center w100 h100">
                     <img src="../images/logo.png" class="wh-logo"/>
                 </div>
             </div>
 
             <!-- right content -->
-            <div class="flex-col">
-    
+            <div class="flex-col flex-center wh50100">
+                <!-- right - middle content -->
+                <div class="flex-col">
+                    <div class="w3-margin-bottom"> 
+                        <h1>Sign In</h1>
+                    </div>
+                    <form class="flex-col">
+                        <label for="login-email">Email</label>
+                        <input type="text" id="login-email">
+
+                        <label for="login-password" class="w3-margin-top">Password</label>
+                        <input type="password" id="login-password">
+
+                        <div class="flex-row w3-margin-top w100">
+                            <div class="w50" style="align-items: flex-start; justify-content: flex-start;">
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                            <div class="w50" style="align-items: flex-end; justify-content: flex-end;">
+                                <button type="submit">Sign In</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- right - bottom content -->
+                
             </div>
         </div>
     </body>

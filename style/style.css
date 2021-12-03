@@ -14,8 +14,20 @@
     align-items: center;
 }
 
+.w50{
+    width: 50%;
+}
+
+.h50{
+    height: 50%;
+}
+
 .w100{
     width: 100%;
+}
+
+.h100{
+    height: 100%;
 }
 
 .wh100{
