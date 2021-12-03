@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../lib/font-awesome.css">
         <link rel="stylesheet" href="../style/login_style.css">
         <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../lib/font-size.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     </head>
 
@@ -25,15 +26,31 @@
             </div>
 
             <!-- right content -->
-            <div class="flex-col">
+            <div class="flex-col flex-center wh50100">
                 <!-- right - middle content -->
-                <div class="flex-center flex-col">
-                    <
+                <div class="flex-col">
+                    <div class="w3-margin-bottom"> 
+                        <h1>Sign In</h1>
+                    </div>
+                    <form class="flex-col">
+                        <label for="login-email">Email</label>
+                        <input type="text" id="login-email">
+
+                        <label for="login-password" class="w3-margin-top">Password</label>
+                        <input type="password" id="login-password">
+
+                        <div class="flex-row w3-margin-top w100">
+                            <div class="w50" style="align-items: flex-start; justify-content: flex-start;">
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                            <div class="w50" style="align-items: flex-end; justify-content: flex-end;">
+                                <button type="submit">Sign In</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <!-- right - bottom content -->
-                <div class="flex-row">
-
-                </div>
+                
             </div>
         </div>
     </body>

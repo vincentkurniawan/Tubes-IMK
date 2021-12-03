@@ -3,6 +3,22 @@ html, body {
     height: 100%;
 }
 
+a, label, button{
+    font-family: Montserrat;
+}
+
+h1{
+    margin: 0;
+}
+
+input{
+    width: 27rem;
+    border-radius: 0.7rem;
+    border: 1px solid black;
+    line-height: 2rem;
+    padding: 1rem;
+}
+
 .half-width{
     width: 50%;
 }
