@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../lib/font-awesome.css">
         <link rel="stylesheet" href="../style/login_style.css">
         <link rel="stylesheet" href="../style/style.css">
-        <link rel="stylesheet" href="../lib/font-size.css">
+        <link rel="stylesheet" href="../lib/fonts.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     </head>
 
@@ -30,33 +30,49 @@
                 <!-- right - middle content -->
                 <div id="right-middle" class="flex-col">
                     <div class="w3-margin-bottom"> 
-                        <h1>Sign In</h1>
+                        <h1 class="fs-32">Sign In</h1>
                     </div>
                     <form class="flex-col">
-                        <label for="login-email">Email</label>
+                        <label for="login-email" class="fs-16">Email</label>
                         <input type="text" id="login-email">
 
-                        <label for="login-password" class="w3-margin-top">Password</label>
+                        <label for="login-password" class="w3-margin-top fs-16">Password</label>
                         <input type="password" id="login-password">
 
                         <div class="flex-row w3-margin-top w100">
                             <div class="flex-row w50" style="align-items: center; justify-content: flex-start;">
-                                <a href="#" style="color: #159674">Forgot Password?</a>
+                                <a href="#" style="color: #00A3FF" class="fs-14">Forgot Password?</a>
                             </div>
                             <div class="flex-row w50" style="align-items: flex-end; justify-content: flex-end;">
-                                <a href="#" class="submit-button">Sign In</a>
+                                <a href="#" class="submit-button fs-16">Sign In</a>
                             </div>
                         </div>
                     </form>
                 </div>
                 <!-- right - bottom content -->
                 <div id="right-bottom" class="flex-row">
-                    <a href="#" class="contact-link">FAQ</a>
-                    <a href="#" class="contact-link">Facebook</a>
-                    <a href="#" class="contact-link">Instagram</a>
-                    <a href="#" class="contact-link">Twitter</a>
+                    <a href="#" class="contact-link fs-14">FAQ</a>
+                    <a href="#" class="contact-link fs-14">Facebook</a>
+                    <a href="#" class="contact-link fs-14">Instagram</a>
+                    <a href="#" class="contact-link fs-14">Twitter</a>
                 </div>
             </div>
+
+            <!-- modals /pop-up forgot password
+            <div class="w3-container">
+                <h2>W3.CSS Modal</h2>
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
+              
+                <div id="id01" class="w3-modal">
+                  <div class="w3-modal-content">
+                    <div class="w3-container">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                      <p>Some text. Some text. Some text.</p>
+                      <p>Some text. Some text. Some text.</p>
+                    </div>
+                  </div>
+                </div>
+            </div> -->
         </div>
     </body>
 </html>
