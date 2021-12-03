@@ -32,29 +32,54 @@
             </div>
         </div>
 
-        <!-- browse help topics -->
-        <div class="browse-large-container">
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <h1>Browse Help Topics</h1>
-            <div class="browse-topics">
-                <div class="topics-card w3-card">
+        <!-- content -->
+        <div class="browse-large-container margin-top-32">
+            <!-- browse help topics -->
+            <h1 class="fs-36 fw-700">Browse Help Topics</h1>
+            <div class="browse-topics margin-top-32">
+                <div class="topics-card w3-card w3-hover-shadow">
                     
                 </div>
+                <div class="topics-card w3-card w3-hover-shadow">
+                    
+                </div>
+                <div class="topics-card w3-card w3-hover-shadow">
+                    
+                </div>
+                <div class="topics-card w3-card w3-hover-shadow">
+                    
+                </div>
+            </div>
+
+            <!-- popular articles accordion -->
+            <h1 class="fs-36 fw-700 margin-top-32">Popular Articles</h1>
+            <div class="accordion-container margin-top-32">
+                <div onclick = "myFunction('dd-content-1')" class="accordion-item w3-button w100 w3-theme w3-hover-theme fs-24">Articles 1<i class="accordion-item-icon fa fa-caret-down"></i></div>
+                <div id = "dd-content-1" class="accordion-dropdown-content w3-bar hide">
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 1</a>
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 2</a>
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 3</a>
+                </div>
+
+                <div onclick = "myFunction('dd-content-2')" class="accordion-item w3-button w100 w3-theme w3-hover-theme fs-24">Articles 2<i class="accordion-item-icon fa fa-caret-down"></i></div>
+                <div id = "dd-content-2" class="accordion-dropdown-content w3-bar hide">
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 1</a>
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 2</a>
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 3</a>
+                </div>
+
+                <div onclick = "myFunction('dd-content-3')" class="accordion-item w3-button w100 w3-theme w3-hover-theme fs-24">Articles 3<i class="accordion-item-icon fa fa-caret-down"></i></div>
+                <div id = "dd-content-3" class="accordion-dropdown-content w3-bar hide">
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 1</a>
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 2</a>
+                    <a href = "#" class="adc-item fs-16 w3-bar-item w3-hover-theme-light-green" style="width: 100%; text-align: center;">Content 3</a>
+                </div>
+
             </div>
         </div>
 
         <!-- footer -->
-        <footer class="footer">
+        <footer class="footer" style="">
             <h2 class="fs-14 fw-700">Our Contact:</h2>
             <a></a>
             <a href="#" class="fs-14">Facebook</a>
@@ -65,5 +90,16 @@
             <h2 class="fs-14">|</h2>
             <h2 class="fs-14">Have questions? Please visit our <a href="#" class="fs-16">FAQ</a></h2>
         </footer>
+
+        <script defer>
+            function myFunction(id) {
+                let x = document.getElementById(id);
+                if (x.className.indexOf("show") == -1) {
+                    x.className += " show";
+                } else { 
+                    x.className = x.className.replace(" show", "");
+                }
+            }
+        </script>
     </body>
 </html>
