@@ -5,6 +5,35 @@
 
 .flex-col{
     display: flex;
-    flex-direction: col;
+    flex-direction: column;
 }
 
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w100{
+    width: 100%;
+}
+
+.wh100{
+    width: 100%;
+    height: 100%;
+}
+
+.wh50100{
+    width: 50%;
+    height: 100%;
+}
+
+.wh10050{
+    width: 100%;
+    height: 50%;
+}
+
+.wh-logo{
+    width: 150px;
+    height: 100px;
+}
