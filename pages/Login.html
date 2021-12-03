@@ -41,7 +41,7 @@
 
                         <div class="flex-row w3-margin-top w100">
                             <div class="flex-row w50" style="align-items: center; justify-content: flex-start;">
-                                <a href="#" style="color: #00A3FF" class="fs-14">Forgot Password?</a>
+                                <a href="#" style="color: #00A3FF" class="fs-14" onclick="document.getElementById('modal_forgot').style.display='block'">Forgot Password?</a>
                             </div>
                             <div class="flex-row w50" style="align-items: flex-end; justify-content: flex-end;">
                                 <a href="#" class="submit-button fs-16">Sign In</a>
@@ -58,21 +58,28 @@
                 </div>
             </div>
 
-            <!-- modals /pop-up forgot password
+            <!-- modals /pop-up forgot password -->
             <div class="w3-container">
-                <h2>W3.CSS Modal</h2>
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
-              
-                <div id="id01" class="w3-modal">
-                  <div class="w3-modal-content">
+                <div id="modal_forgot" class="w3-modal">
+                  <div class="w3-modal-content" style="width: 30%; padding: 3%;">
                     <div class="w3-container">
-                      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                      <p>Some text. Some text. Some text.</p>
-                      <p>Some text. Some text. Some text.</p>
+                        <span onclick="document.getElementById('modal_forgot').style.display='none'" class="w3-button w3-display-topright fs-32">&times;</span>
+                        <div class="w3-margin-bottom"> 
+                            <h1 class="fs-32">Reset Password</h1>
+                        </div>
+                        <form class="flex-col w100" >
+                            <label for="login-email" class="fs-16">Email</label>
+                            <input type="text" id="login-email">
+                            <span class="fs-12 w3-text-red">We will send an email to reset your password.</span>
+
+                            <div class="flex-center" style="margin-top: 10%;">
+                                <a href="#" class="submit-button fs-16" style="padding-top: 2%; padding-bottom: 2%;">Submit</a> 
+                            </div>
+                        </form>
                     </div>
                   </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </body>
 </html>
