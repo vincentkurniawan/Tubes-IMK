@@ -4,8 +4,19 @@
 	font-family: Montserrat;
 }
 
+.header {
+    margin-top: 16px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .cart {
 	width: 80%;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	margin-top: 30px;
 }
 
 .cover {
@@ -16,9 +27,48 @@
 }
 
 .bold {
-	font-weight: bold;
+	font-weight: bolder;
 }
 
 .checkbox {
-	vertical-align: middle;
+	/*vertical-align: middle;*/
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.w10 {
+	width: 10%;
+	height: auto;
+}
+
+.w15 {
+	width: 15%;
+	height: auto;
+}
+
+.w20 {
+	width: 20%;
+	height: auto;
+}
+
+.w60 {
+	width: 60%;
+	height: auto;
+}
+
+.del {
+	margin-top: auto;
+	margin-bottom: 5%;
+	margin-left: 10%;
+}
+
+.price {
+	margin: auto;
+}
+
+.btnPlusMin {
+	border-radius: 50%;
+	font-size: 100%;
+	font-weight: bolder;
+	border: none;
 }

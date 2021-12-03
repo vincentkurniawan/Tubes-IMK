@@ -13,34 +13,46 @@
 
     <body>
     	<!-- Header -->
-    	<div class="w3-container">
-			<img src="../images/logo.png" class="w3-display-topmiddle">
+    	<div class="header">
+			<img src="../images/logo.png" class="wh-logo">
 		</div>
 
-		<div class="cart w3-card w3-border w3-border-grey w3-display-middle w3-round-xlarge w3-padding">
-			<div class="bold w3-xlarge">
+		<div class="cart w3-card w3-border w3-border-grey w3-round-xlarge w3-padding flex-col">
+			<div class="bold w3-xlarge w3-margin">
 				<i class="fa fa-shopping-cart"></i> My Cart
 			</div>
 
 			<!-- Item Buku -->
-			<div class="flex-row">
+			<div class="flex-row w3-margin">
 				<input type="checkbox" name="" class="w3-check checkbox">
-				<img src="../images/books_cover/14.png" class="cover w3-margin w3-round-xlarge">
+				<img src="../images/books_cover/14.png" class="cover w3-margin w3-round-xlarge w10">
 
 				<!-- Keterangan Buku -->
-				<div class="">
-					<div class="">
-						<p class="bold w3-large">Before We Disappear</p>
-						<p class="w3-medium">by Shaun David Hutchinson</p>
+				<div class="w3-margin-left w3-margin-right flex-center flex-col">
+					<div class="flex-col">
+						<p class="bold w3-large w3-margin-0">Before We Disappear</p>
+						<p class="w3-medium w3-margin-0">by Shaun David Hutchinson</p>
+						<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Soft Cover - 1 Pcs</p>
+						<p class="w3-medium bold w3-margin-0 w3-text-grey">Rp 60.000</p>
 					</div>
-					<div class="w3-text-grey">
-						<p class="w3-small">Soft Cover - 1 Pcs</p>
-						<p class="w3-medium bold">Rp 60.000</p>
+				</div>
+
+				<!-- Tombol hapus -->
+				<div class="bold w15 del">
+					<i class="fa fa-trash bold w3-medium"> Delete</i>
+				</div>
+
+				<!-- Tombol tambah dan harga -->
+				<div class="w20 price">
+					<p class="w3-text-theme w3-large bold flex-center">Rp 120.000</p>
+					<!-- button tambah kurang -->
+					<div class="flex-row">
+						<button class="btnPlusMin w3-padding w3-margin w3-theme">-</button>
+						<p class="bold w3-margin flex-center">2</p>
+						<button class="btnPlusMin w3-padding w3-margin w3-theme">+</button>
 					</div>
 				</div>
 			</div>
-		</div>		
-		<!--  cart  w3-round-xlarge w3-border w3-border-grey w3-margin -->
-        
+		</div>        
     </body>
 </html>
