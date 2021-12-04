@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<meta charset="UTF-8">
+  		<title>John's Books</title>
+
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="../lib/w3.css">
         <link rel="stylesheet" href="../lib/w3-theme-book.css">
@@ -96,9 +99,15 @@
 		</div>    
 		<!-- Button Order dan Checkout -->
 		<div class="flex-center bold">
-			<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large">View Catalog</button>
+			<a href="Home.html" class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large" style="text-decoration: none;">View Catalog</a>
 			<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large" onclick="document.getElementById('order_summary').style.display='block'">Checkout</button>
 		</div>    
+
+		<!-- footer -->
+		<div class="footer light-green-background">
+			<p>Our Contact: <a href="https://www.facebook.com">Facebook</a> | <a href="https://www.instagram.com">Instagram</a> | <a href="https://www.twitter.com">Twitter</a></p>
+			<p>Have questions? Please visit our <a href="faq.html">FAQ</a></p>
+		</div>
 
 		<!-- modals /pop-up delete item dari cart -->
 		<div class="w3-container">
