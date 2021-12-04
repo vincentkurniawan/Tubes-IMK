@@ -6,8 +6,9 @@
         <link rel="stylesheet" href="../lib/w3-theme-book.css">
         <link rel="stylesheet" href="../lib/font-awesome.min.css">
         <link rel="stylesheet" href="../lib/font-awesome.css">
-        <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/cart_style.css">
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../lib/fonts.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     </head>
 
@@ -38,8 +39,8 @@
 				</div>
 
 				<!-- Tombol hapus -->
-				<div class="bold w15 del">
-					<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey"> Delete</i>
+				<div class="bold w15 del" onclick="document.getElementById('modal_delete').style.display='block'">
+					<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn">Delete</span></i>
 				</div>
 
 				<!-- Tombol tambah dan harga -->
@@ -72,8 +73,8 @@
 				</div>
 
 				<!-- Tombol hapus -->
-				<div class="bold w15 del">
-					<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey"> Delete</i>
+				<div class="bold w15 del" onclick="document.getElementById('modal_delete').style.display='block'">
+					<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn">Delete</span></i>
 				</div>
 
 				<!-- Tombol tambah dan harga -->
@@ -93,10 +94,81 @@
 				<p class="w3-xlarge w50 w3-right-align w3-margin-right">Rp 205.000</p>
 			</div>
 		</div>    
-		<!-- Button Order dan Catalog -->
+		<!-- Button Order dan Checkout -->
 		<div class="flex-center bold">
 			<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large">View Catalog</button>
-			<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large">Checkout</button>
+			<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large" onclick="document.getElementById('order_summary').style.display='block'">Checkout</button>
 		</div>    
+
+		<!-- modals /pop-up delete item dari cart -->
+		<div class="w3-container">
+			<div id="modal_delete" class="w3-modal">
+			  <div class="w3-modal-content" style="width: 30%; padding: 3%; border-radius: 10px;">
+				<div class="w3-container">
+					<span onclick="document.getElementById('modal_delete').style.display='none'" class="w3-button w3-display-topright fs-32">&times;</span>
+					<div class="w3-margin-bottom w100 flex-center"> 
+						<h1 class="fs-32">Are you sure to delete this item?</h1>
+					</div>
+					<form class="flex-row w100" >
+						<a href="#" class="w3-button fs-16 w50 w3-margin-right yesno_btn w3-hover-pale-red" style="background-color: #C30202">Yes</a> 
+						<a href="#" class="w3-button fs-16 w50 yesno_btn w3-hover-pale-green" style="background-color: #2A973C;">No</a> 
+					</form>
+				</div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- modals /pop-up order summary -->
+		<div class="w3-container">
+			<div id="order_summary" class="w3-modal">
+			  <div class="w3-modal-content" style="width: 40%; padding: 3%; border-radius: 10px;">
+				<div class="w3-container">
+					<span onclick="document.getElementById('order_summary').style.display='none'" class="w3-button w3-display-topright fs-32">&times;</span>
+					<div class="w3-margin-bottom w100"> 
+						<h1 class="fs-16" style="font-weight:bolder;">Order Summary</h1>
+					</div>
+					<div class="flex-col w100" >
+						<div class="flex-row w100" style="justify-content: space-between; margin-bottom: 3%;">
+							<img src="../images/books_cover/14.png" class="cover w3-round-medium w15">
+							<div class="flex-col">
+								<h2 class="fs-16" style="font-weight: bolder; margin:0px">Before We Disappear</h2>
+								<p>by Shaun David Hutchinson</p>
+								<br>
+								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 60.000 / pcs</p>
+							</div>
+							<div class="w3-text-theme-cart w3-large bold">Rp 120.000</div>
+						</div>
+						<hr style="width: 100%; border: 1px solid gray;">
+						<div class="flex-row w100" style="justify-content: space-between; margin-top: 3%; margin-bottom: 3%;">
+							<img src="../images/books_cover/6.png" class="cover w3-round-medium w15">
+							<div class="flex-col" style=" margin-left: -10%;">
+								<h2 class="fs-16" style="font-weight: bolder;">Not Here to Be Liked</h2>
+								<p>by Michelle Quach</p>
+								<br>
+								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 100.000 / pcs</p>
+							</div>
+							<div class="w3-text-theme-cart w3-large bold">Rp 100.000</div>
+						</div>
+						<hr style="width: 100%; border: 1px solid gray;">
+						<div class="flex-row " style="justify-content: space-between;">
+							<span>Subtotal</span>
+							<span class="w3-medium bold">Rp 205.000</span>
+						</div>
+						<div class="flex-row " style="justify-content: space-between;">
+							<span>Tax (10%)</span>
+							<span class="w3-medium bold">Rp 20.500</span>
+						</div>
+						<hr style="width: 100%;">
+						<div class="flex-row "  style="justify-content: space-between;">
+							<span class="w3-medium bold">TOTAL</span>
+							<span class="w3-text-theme-cart w3-medium bold">Rp 225.500</span>
+						</div>
+
+						<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large">ORDER</button>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
     </body>
 </html>

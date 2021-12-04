@@ -4,6 +4,10 @@
 	font-family: Montserrat;
 }
 
+button:hover{
+	cursor: pointer;
+}
+
 .header {
     margin-top: 16px;
     display: flex;
@@ -102,4 +106,16 @@ hr {
 
 .btn {
 	border: none;
+}
+
+.yesno_btn{
+	padding-top: 2%; 
+	padding-bottom: 2%; 
+	color: white;
+	border-radius: 7px;
+}
+
+.delete_btn:hover{
+	color: red;
+	cursor: pointer;
 }
