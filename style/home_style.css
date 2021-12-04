@@ -1,5 +1,7 @@
 body{
   font-family: 'Montserrat', serif;
+  padding: 0px;
+  margin: 0px;
 }
 
 .logo-container{
@@ -9,7 +11,6 @@ body{
 
 .header-container{
   border-radius: 20px;
-  background-color: #EBFFFB;
   display:flex;
   height: 30%;
   min-width: 800px;
@@ -53,19 +54,22 @@ body{
   justify-content:space-evenly;
 }
 
-.catalog-card{
+.light-green-background{
   background-color: #EBFFFB;
+}
+
+.catalog-card{
   display:flex;
   overflow: hidden;
   max-width: 450px;
   border-radius: 15px;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .catalog-card img{
   height: 255px;
-
 }
 
 .catalog-card .content{
@@ -87,9 +91,7 @@ body{
 
 .catalog-card .content .header .plus{
   margin-top: 5px;
-  margin-left: 5px;
-  width: 15px;
-  height: 15px;
+  margin-left: 10px;
 }
 
 .catalog-card .content .author{
@@ -133,9 +135,11 @@ body{
 
 .catalog{
   display: flex;
+  flex-direction: column;
   margin-top: 40px;
   justify-content: center;
-  height: 1000px; /*Sementara*/
+  align-items: center;
+  gap: 30px;
 }
 
 .textbox{
@@ -147,19 +151,70 @@ body{
   outline:none;
 }
 
-.searchbar{
-  width: 70vw;
+.box-shadow{
   border: 2px solid #EBEBED;
   box-sizing: border-box;
   box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  overflow:hidden;
+}
 
+.searchbar{
+  width: 70vw;
+  overflow:hidden;
+  align-items: center;
   display: flex;
-  
+
 }
 
 .search-by{
   background-color: white;
   padding: 0px 15px;
+}
+
+.misc-bar{
+  width: 70vw;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-button{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px 20px;
+  align-items: baseline;
+}
+
+.books{
+  width: 80vw;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.pagination{
+  letter-spacing: 10px;
+}
+
+.page-number{
+  text-decoration: none;
+  color: black;
+}
+
+.footer{
+  padding: 20px 0px;
+  width: 100%;
+}
+
+.footer p{
+  text-align:center;
+  font-size: 12px;
+}
+.footer a{
+  text-decoration: none;
+  color: #00A3FF;
 }
