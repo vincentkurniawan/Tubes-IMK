@@ -127,4 +127,5 @@ body {
 .adc-item {
     cursor: pointer;
     text-decoration: none;
+    background-color: rgb(223, 223, 223) !important;
 }
