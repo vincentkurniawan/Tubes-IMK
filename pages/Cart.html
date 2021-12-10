@@ -38,7 +38,7 @@
 							<p class="bold w3-xlarge w3-margin-0">Before We Disappear</p>
 							<p class="w3-medium w3-margin-0">by Shaun David Hutchinson</p>
 							<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Soft Cover - 1 Pcs</p>
-							<p class="w3-medium bold w3-margin-0 w3-text-dark-grey" id="pricePerPc">Rp 60.000</p> <!-- value blm jalan -->
+							<p class="w3-medium bold w3-margin-0 w3-text-dark-grey" id="pricePerPc">Rp 60.000,00</p> <!-- value blm jalan -->
 						</div>
 					</div>
 
@@ -201,13 +201,14 @@
 			let count = 1;
 			let qty = document.getElementById("qty");
 			// let pricePcs = document.getElementById("pricePerPc");
+			let pricePcs = 60000;
 			let subtotal = document.getElementById("subtotal");
 			
 			function plus(){
 				count++;
 				qty.value = count;
 				qty.innerHTML = count;
-				subtotal.innerHTML = count*60000; //blm ubah ke bentuk rupiah, blm pake harga buku sebenarnya
+				subtotal.innerHTML = rupiah(count*pricePcs);
 			}
 
 			function min() {
@@ -215,8 +216,19 @@
 					count--;
 					qty.value = count;
 					qty.innerHTML = count;
-					subtotal.innerHTML = count*60000; //blm ubah ke bentuk rupiah, blm pake harga buku sebenarnya
+					subtotal.innerHTML = rupiah(count*pricePcs);
 				}
+			}
+
+			// ubah ke format rupiah
+			function rupiah(nominal){
+				let n = new Number(nominal);
+				let rupiah = {
+					style: "currency",
+					currency: "IDR"
+				}
+
+				return n.toLocaleString("id-ID", rupiah);
 			}
 		</script>
     </body>
