@@ -43,6 +43,7 @@ var books=[
   "src":"../images/books_cover/7.png"
 }
 ];
+var descending = false;
 
 /**
  * References : https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
@@ -67,17 +68,20 @@ const sort_by = (field, reverse, primer) => {
 function init(){
   let sortSelection = document.getElementById("sort");
   sortSelection.addEventListener("change", onSortChanged);
+
+  let sortDirection = document.getElementById("sort-direction");
+  sortDirection.addEventListener("click", onSortDirectionClick);
 }
 
-function onSortChanged(e){
+function onSortChanged(){
   let sortSelection = document.getElementById("sort");
   let sorted; //array of books yang sudah di sortir
   if(sortSelection.value == "0"){
     sorted = books.sort(sort_by("rating", true, parseFloat));
   }else if(sortSelection.value == "1"){
-    sorted = books.sort(sort_by("title", false, (a) => a.toUpperCase()));
+    sorted = books.sort(sort_by("title", descending, (a) => a.toUpperCase()));
   }else{
-    sorted = books.sort(sort_by("author", false, (a) => a.toUpperCase()));
+    sorted = books.sort(sort_by("author", descending, (a) => a.toUpperCase()));
   }
   
   let bookCards = document.getElementsByClassName("cc");
@@ -96,5 +100,22 @@ function onSortChanged(e){
   }
 }
 
+function onSortDirectionClick(e){
+  e.preventDefault();
+  let sortDirection = document.getElementById("sort-direction");
+  if(descending){
+    //ubah ke ascending
+    descending = false;
+    sortDirection.children[0].classList.remove("fa-sort-amount-desc");
+    sortDirection.children[0].classList.add("fa-sort-amount-asc");
+    
+  }else{
+    //ubah ke descending
+    descending = true;
+    sortDirection.children[0].classList.remove("fa-sort-amount-asc");
+    sortDirection.children[0].classList.add("fa-sort-amount-desc");
+  }
+  onSortChanged();
+}
 
 init();
