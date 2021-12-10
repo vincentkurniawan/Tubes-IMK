@@ -2,15 +2,17 @@
 <head>
   <meta charset="UTF-8">
   <title>John's Books</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="../lib/w3.css">
-  <link rel="stylesheet" href="../lib/w3-theme-book.css">
+  <link rel="stylesheet" href="../lib/w3-theme-book.css">-->
   <link rel="stylesheet" href="../style/home_style.css">
   <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="../lib/font-awesome.min.css">
   <link rel="stylesheet" href="../lib/font-awesome.css"> 
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
+
+  <script src="../script/home.js" defer></script> 
 </head>
 <body>
   <div class="logo-container">
@@ -37,7 +39,7 @@
     <!--Carousel-->
     <div class="carousel">
       <!--Buku Pertama-->
-      <div class="catalog-card light-green-background w3-hover-shadow">
+      <div class="catalog-card light-green-background">
         <img src="../images/books_cover/9.png">
         <div class="content">
           <div class="header">
@@ -120,10 +122,10 @@
     <div class="misc-bar">
       <form class="box-shadow"> 
         <i class="fa fa-sort-amount-asc" aria-hidden="true" style="color:#1DD2A2; padding-left: 15px; margin-right: 5px;"></i>
-        <select id="sort" class="search-by textbox">
-          <option>Rating</option>
-          <option>Title</option>
-          <option>Author</option>
+        <select id="sort" class="search-by textbox" value="0">
+          <option value="0">Rating</option>
+          <option value="1">Title</option>
+          <option value="2">Author</option>
         </select>
       </form>
 
@@ -132,7 +134,7 @@
   
     <div class="books">
       <!--Buku Pertama-->
-      <div class="catalog-card w3-hover-shadow">
+      <div class="catalog-card cc">
         <img src="../images/books_cover/1.png">
         <div class="content">
           <div class="header">
@@ -153,7 +155,7 @@
       </div>
 
       <!--Buku Kedua-->
-      <div class="catalog-card w3-hover-shadow">
+      <div class="catalog-card w3-hover-shadow cc">
         <img src="../images/books_cover/2.png">
         <div class="content">
           <div class="header">
@@ -174,7 +176,7 @@
       </div>
 
       <!--Buku Ketiga-->
-      <div class="catalog-card w3-hover-shadow">
+      <div class="catalog-card w3-hover-shadow cc">
         <img src="../images/books_cover/3.png">
         <div class="content">
           <div class="header">
@@ -195,7 +197,7 @@
       </div>
 
       <!--Buku Keempat-->
-      <div class="catalog-card w3-hover-shadow">
+      <div class="catalog-card w3-hover-shadow cc">
         <img src="../images/books_cover/4.png">
         <div class="content">
           <div class="header">
@@ -216,7 +218,7 @@
       </div>
 
       <!--Buku Kelima-->
-      <div class="catalog-card w3-hover-shadow">
+      <div class="catalog-card w3-hover-shadow cc">
         <img src="../images/books_cover/5.png">
         <div class="content">
           <div class="header">
@@ -237,7 +239,7 @@
       </div>
 
       <!--Buku Keenam-->
-      <div class="catalog-card w3-hover-shadow">
+      <div class="catalog-card w3-hover-shadow cc">
         <img src="../images/books_cover/7.png">
         <div class="content">
           <div class="header">
