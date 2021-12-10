@@ -119,3 +119,7 @@ hr {
 	color: red;
 	cursor: pointer;
 }
+
+.justify_space {
+	justify-content: space-between;
+}
