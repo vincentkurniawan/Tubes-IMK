@@ -216,6 +216,7 @@
 					qty.innerHTML = count1;
 					sub1 += pricePcs;
 					subtotal.innerHTML = rupiah(sub1);
+					// ganti warna button
 					// if(count1 > 1){
 					// 	let btnMin = document.getElementById('minQty');
 					// 	btnMin.classList.remove("w3-theme-light-green");
@@ -230,6 +231,7 @@
 					qty.innerHTML = count2;
 					sub2 += pricePcs;
 					subtotal.innerHTML = rupiah(sub2);
+					// ganti warna button
 					// if(count2 > 1){
 					// 	let btnMin = document.getElementById('minQty2');
 					// 	btnMin.classList.remove("w3-theme-light-green");
@@ -249,7 +251,10 @@
 						qty.value = count1;
 						qty.innerHTML = count1;
 						subtotal.innerHTML = rupiah(count1*pricePcs);
+						tempTotal -= pricePcs;
+						
 					}
+					// ganti warna button
 					// if(count1 == 1){
 					// 	let btnMin = document.getElementById('minQty');
 					// 	btnMin.classList.remove(" w3-theme-cart")
@@ -264,14 +269,15 @@
 						qty.value = count2;
 						qty.innerHTML = count2;
 						subtotal.innerHTML = rupiah(count2*pricePcs);
+						tempTotal -= pricePcs;
 					}
+					// ganti warna button
 					// if(count1 == 1){
 					// 	let btnMin = document.getElementById('minQty2');
 					// 	btnMin.classList.remove(" w3-theme-cart")
 					// 	btnMin.classList.add(" w3-theme-light-green")
 					// }
 				}
-				tempTotal -= pricePcs;
 				update(tempTotal);
 			}
 
