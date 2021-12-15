@@ -27,7 +27,7 @@
 			</div>
 
 			<!-- Item Buku -->
-			<div class="flex-center">
+			<div class="flex-center" id="book_item1">
 				<div class="flex-row margin">
 					<input type="checkbox" name="" class="w3-check checkbox">
 					<img src="../images/books_cover/14.png" class="cover w3-margin w3-round-xlarge w10">
@@ -43,7 +43,7 @@
 					</div>
 
 					<!-- Tombol hapus -->
-					<div class="bold w15 del" onclick="document.getElementById('modal_delete').style.display='block'">
+					<div class="bold w15 del" onclick="showDeleteModal(1)">
 						<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn"> Delete</span></i>
 					</div>
 
@@ -60,10 +60,10 @@
 				</div>
 			</div>
 
-			<hr>
+			<hr id="pembatasCart">
 
 			<!-- Item Buku 2 -->
-			<div class="flex-center">
+			<div class="flex-center" id="book_item2">
 				<div class="flex-row margin">
 				<input type="checkbox" name="" class="w3-check checkbox">
 				<img src="../images/books_cover/6.png" class="cover w3-margin w3-round-xlarge w10">
@@ -79,7 +79,7 @@
 				</div>
 
 				<!-- Tombol hapus -->
-				<div class="bold w15 del" onclick="document.getElementById('modal_delete').style.display='block'">
+				<div class="bold w15 del" onclick="showDeleteModal(2)">
 					<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn"> Delete</span></i>
 				</div>
 
@@ -125,13 +125,13 @@
 			<div id="modal_delete" class="w3-modal">
 			  <div class="w3-modal-content" style="width: 30%; padding: 3%; border-radius: 10px;">
 				<div class="w3-container">
-					<span onclick="document.getElementById('modal_delete').style.display='none'" class="w3-button w3-display-topright fs-32">&times;</span>
+					<span onclick="closeDeleteModal()" class="w3-button w3-display-topright fs-32">&times;</span>
 					<div class="w3-margin-bottom w100 flex-center"> 
 						<h1 class="fs-32 w3-center">Are you sure to delete this item?</h1>
 					</div>
 					<form class="flex-row w100" >
-						<a href="#" class="w3-button fs-16 w50 yesno_btn w3-hover-pale-green w3-margin bold" style="background-color: #2A973C;">Yes</a>
-						<a href="#" class="w3-button fs-16 w50 w3-margin-right yesno_btn w3-hover-pale-red w3-margin bold" style="background-color: #C30202">No</a>
+						<a href="#" class="w3-button fs-16 w50 yesno_btn w3-hover-pale-green w3-margin bold" style="background-color: #2A973C;" onclick="deleteBook()">Yes</a>
+						<a href="#" class="w3-button fs-16 w50 w3-margin-right yesno_btn w3-hover-pale-red w3-margin bold" style="background-color: #C30202" onclick="closeDeleteModal()">No</a>
 					</form>
 				</div>
 			  </div>
@@ -148,7 +148,7 @@
 						<h1 class="fs-16" style="font-weight:bolder;">Order Summary</h1>
 					</div>
 					<div class="flex-col w100" >
-						<div class="flex-row w100" style="justify-content: space-between; margin-bottom: 3%;">
+						<div class="flex-row w100" style="justify-content: space-between; margin-bottom: 3%;" id="book1_item_summary">
 							<img src="../images/books_cover/14.png" class="cover w3-round-medium w15">
 							<div class="flex-col">
 								<h2 class="fs-16" style="font-weight: bolder; margin:0px">Before We Disappear</h2>
@@ -162,7 +162,7 @@
 							</div>
 						</div>
 						<hr style="width: 100%; border: 1px solid gray;">
-						<div class="flex-row w100" style="justify-content: space-between; margin-top: 3%; margin-bottom: 3%;">
+						<div class="flex-row w100" style="justify-content: space-between; margin-top: 3%; margin-bottom: 3%;" id="book2_item_summary">
 							<img src="../images/books_cover/6.png" class="cover w3-round-medium w15">
 							<div class="flex-col" style=" margin-left: -10%;">
 								<h2 class="fs-16" style="font-weight: bolder;">Not Here to Be Liked</h2>
@@ -318,12 +318,58 @@
 				total.innerHTML = rupiah(totalCount);
 			}
 
-			//close modal 
+			//close modal order summary
 			function closeModal(){
 				document.getElementById('order_summary').style.display='none';
 			}
+
+			let tempIdBook;
+			//show modal delete
+			function showDeleteModal(id){
+				document.getElementById('modal_delete').style.display='block';
+				tempIdBook = id;
+			}
+
+			//close modal delete
+			function closeDeleteModal(){
+				document.getElementById('modal_delete').style.display='none';
+			}
+
+			//delete book item
+			function deleteBook(){
+				let book, bookSummary;
+
+				if(tempIdBook == 1){ //hapus buku 1
+					book = document.getElementById('book_item1');
+					book.style.display = 'none';
+					closeDeleteModal();
+					tempTotal -= sub1; 
+					sub1 = 0;
+					update(tempTotal);
+
+					//hapus item dari order summary modal
+					bookSummary = document.getElementById('book1_item_summary');
+					bookSummary.style.display = 'none';
+				}
+				else if(tempIdBook == 2){ //hapus buku 2
+					book = document.getElementById('book_item2');
+					book.style.display = 'none';
+					closeDeleteModal();
+					tempTotal -= sub2;
+					sub2 = 0;
+					update(tempTotal);
+
+					//hapus item dari order summary modal
+					bookSummary = document.getElementById('book2_item_summary');
+					bookSummary.style.display = 'none';
+				}
+				document.getElementById('pembatasCart').style.display = 'none';
+			}
+
+			//update summary modal
+			function updateSummaryModal(){
+
+			}
 		</script>
-		<!-- <p class="w3-large w3-text-theme-cart w3-large bold" id="modal_sub1"></p>
-								<p class="bold w3-margin-top"><span id="modal_qty1"></span> pcs</p> -->
     </body>
 </html>
