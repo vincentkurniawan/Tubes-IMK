@@ -38,7 +38,7 @@
 							<p class="bold w3-xlarge w3-margin-0">Before We Disappear</p>
 							<p class="w3-medium w3-margin-0">by Shaun David Hutchinson</p>
 							<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Soft Cover - 1 Pcs</p>
-							<p class="w3-medium bold w3-margin-0 w3-text-dark-grey" id="pricePerPc">Rp 60.000,00</p> <!-- value blm jalan -->
+							<p class="w3-medium bold w3-margin-0 w3-text-dark-grey" id="pricePerPc">Rp 60.000</p> <!-- value blm jalan -->
 						</div>
 					</div>
 
@@ -49,12 +49,12 @@
 
 					<!-- Tombol tambah dan harga -->
 					<div class="w20 center">
-						<p class="w3-text-theme-cart w3-large bold flex-center" id="subtotal">Rp 60.000</p>
+						<p class="w3-text-theme-cart w3-large bold flex-center" id="subtotal1">Rp 60.000,00</p>
 						<!-- button tambah kurang -->
 						<div class="flex-row flex-center">
-							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="minQty" onclick="min()">-</button>
-							<p value="1" id="qty" class="bold w3-margin flex-center">1</p>
-							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="addQty" onclick="plus()">+</button>
+							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="minQty" onclick="min(60000, 1)">-</button>
+							<p value="1" id="qty_book1" class="bold w3-margin flex-center">1</p>
+							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="addQty2" onclick="plus(60000, 1)">+</button>
 						</div>
 					</div>
 				</div>
@@ -85,12 +85,12 @@
 
 				<!-- Tombol tambah dan harga -->
 				<div class="w20 center">
-					<p class="w3-text-theme-cart w3-large bold flex-center">Rp 100.000</p>
+					<p class="w3-text-theme-cart w3-large bold flex-center" id="subtotal2">Rp 100.000,00</p>
 					<!-- button tambah kurang -->
 					<div class="flex-row flex-center">
-						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart">-</button>
-						<p class="bold w3-margin flex-center">1</p>
-						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart">+</button>
+						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="minQty2" onclick="min(100000, 2)">-</button>
+						<p value="1" id="qty_book2" class="bold w3-margin flex-center">1</p>
+						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="addQty" onclick="plus(100000, 2)">+</button>
 					</div>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 
 			<div class="w3-theme-cart round-bottom flex-row bold w3-padding justify_space w3-xlarge">
 				<p>Subtotal</p>
-				<p>Rp 205.000</p>
+				<p id="subtotal_all">Rp 205.000,00</p>
 			</div>
 		</div>    
 		<!-- Button Order dan Checkout -->
@@ -198,26 +198,77 @@
 		</div>
 
 		<script>
-			let count = 1;
-			let qty = document.getElementById("qty");
-			// let pricePcs = document.getElementById("pricePerPc");
-			let pricePcs = 60000;
-			let subtotal = document.getElementById("subtotal");
+			let count1 = 1;
+			let count2 = 1;
+			let qty, subtotal;
+			let tempTotal = 60000+100000;
+			let subtotal_all = document.getElementById("subtotal_all");
+			subtotal_all.innerHTML = rupiah(tempTotal);
 			
-			function plus(){
-				count++;
-				qty.value = count;
-				qty.innerHTML = count;
-				subtotal.innerHTML = rupiah(count*pricePcs);
+			function plus(pricePcs, id){
+				if(id == 1){
+					qty = document.getElementById('qty_book1');
+					subtotal = document.getElementById('subtotal1');
+					count1++;
+					qty.value = count1;
+					qty.innerHTML = count1;
+					subtotal.innerHTML = rupiah(count1*pricePcs);
+					// if(count1 > 1){
+					// 	let btnMin = document.getElementById('minQty');
+					// 	btnMin.classList.remove("w3-theme-light-green");
+					// 	btnMin.classList.add(" w3-theme-cart");
+					// }
+				}
+				else if(id == 2){
+					qty = document.getElementById('qty_book2');
+					subtotal = document.getElementById('subtotal2');
+					count2++;
+					qty.value = count2;
+					qty.innerHTML = count2;
+					subtotal.innerHTML = rupiah(count2*pricePcs);
+					// if(count2 > 1){
+					// 	let btnMin = document.getElementById('minQty2');
+					// 	btnMin.classList.remove("w3-theme-light-green");
+					// 	btnMin.classList.add(" w3-theme-cart");
+					// }
+				}
+				tempTotal += pricePcs;
+				update(tempTotal);
 			}
 
-			function min() {
-				if (count > 1) {
-					count--;
-					qty.value = count;
-					qty.innerHTML = count;
-					subtotal.innerHTML = rupiah(count*pricePcs);
+			function min(pricePcs, id) {
+				if(id == 1){
+					qty = document.getElementById('qty_book1');
+					subtotal = document.getElementById('subtotal1');
+					if (count1 > 1) {
+						count1--;
+						qty.value = count1;
+						qty.innerHTML = count1;
+						subtotal.innerHTML = rupiah(count1*pricePcs);
+					}
+					// if(count1 == 1){
+					// 	let btnMin = document.getElementById('minQty');
+					// 	btnMin.classList.remove(" w3-theme-cart")
+					// 	btnMin.classList.add(" w3-theme-light-green")
+					// }
 				}
+				else if(id == 2){
+					qty = document.getElementById('qty_book2');
+					subtotal = document.getElementById('subtotal2');
+					if (count2 > 1) {
+						count2--;
+						qty.value = count2;
+						qty.innerHTML = count2;
+						subtotal.innerHTML = rupiah(count2*pricePcs);
+					}
+					// if(count1 == 1){
+					// 	let btnMin = document.getElementById('minQty2');
+					// 	btnMin.classList.remove(" w3-theme-cart")
+					// 	btnMin.classList.add(" w3-theme-light-green")
+					// }
+				}
+				tempTotal -= pricePcs;
+				update(tempTotal);
 			}
 
 			// ubah ke format rupiah
@@ -227,8 +278,12 @@
 					style: "currency",
 					currency: "IDR"
 				}
-
 				return n.toLocaleString("id-ID", rupiah);
+			}
+
+			//update subtotal
+			function update(tempTotal){
+				subtotal_all.innerHTML = rupiah(tempTotal);
 			}
 		</script>
     </body>
