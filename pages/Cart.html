@@ -123,7 +123,7 @@
 		<!-- modals /pop-up delete item dari cart -->
 		<div class="w3-container">
 			<div id="modal_delete" class="w3-modal">
-			  <div class="w3-modal-content" style="width: 30%; padding: 3%; border-radius: 10px;">
+			  <div class="w3-modal-content w3-animate-top" style="width: 30%; padding: 3%; border-radius: 10px;">
 				<div class="w3-container">
 					<span onclick="closeDeleteModal()" class="w3-button w3-display-topright fs-32">&times;</span>
 					<div class="w3-margin-bottom w100 flex-center"> 
@@ -141,7 +141,7 @@
 		<!-- modals /pop-up order summary -->
 		<div class="w3-container">
 			<div id="order_summary" class="w3-modal">
-			  <div class="w3-modal-content" style="width: 40%; padding: 3%; border-radius: 10px;">
+			  <div class="w3-modal-content w3-animate-top" style="width: 40%; padding: 3%; border-radius: 10px;">
 				<div class="w3-container">
 					<span onclick="closeModal()" class="w3-button w3-display-topright fs-32">&times;</span>
 					<div class="w3-margin-bottom w100"> 
@@ -366,9 +366,15 @@
 				document.getElementById('pembatasCart').style.display = 'none';
 			}
 
-			//update summary modal
-			function updateSummaryModal(){
-
+			window.onclick = function(event) {
+				let modalOrder = document.getElementById('order_summary');
+				let modalDel = document.getElementById('modal_delete');
+				if(event.target == modalOrder){
+					modalOrder.style.display = "none";
+				}
+				else if(event.target == modalDel) {
+					modalDel.style.display = "none";
+				}
 			}
 		</script>
     </body>
