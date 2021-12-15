@@ -71,6 +71,17 @@ function init(){
 
   let sortDirection = document.getElementById("sort-direction");
   sortDirection.addEventListener("click", onSortDirectionClick);
+
+  let cards = document.getElementsByClassName("catalog-card");
+  for(let i = 0; i < cards.length; i++){
+    cards[i].addEventListener('click', onCardClick);
+  }
+}
+
+function onCardClick(e){
+  let badge = document.getElementsByClassName("badge")[0];
+  console.log(badge);
+  badge.style.setProperty('--num', "10");
 }
 
 function onSortChanged(){
