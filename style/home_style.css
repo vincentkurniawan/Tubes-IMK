@@ -107,7 +107,7 @@ body{
 }
 
 .catalog-card .content .synopsis{
-  font-size: 10px;
+  font-size: 9px;
   text-align: justify;
 }
 
@@ -217,4 +217,29 @@ body{
 .footer a{
   text-decoration: none;
   color: #00A3FF;
+}
+
+i {   
+  text-align:center;
+  position: relative;
+}
+
+.badge{
+  --num: "1";
+}
+
+.badge:after{
+  content: var(--num);
+  position: absolute;
+  background: #FA3E3E;
+  height:1rem;
+  top: -0.7rem;
+  right:-0.5rem;
+  width:1rem;
+  text-align: center;
+  line-height: 1rem;;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  color:white;
+  border:1px solid red;
 }
