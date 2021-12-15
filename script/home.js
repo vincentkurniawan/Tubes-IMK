@@ -76,12 +76,24 @@ function init(){
   for(let i = 0; i < cards.length; i++){
     cards[i].addEventListener('click', onCardClick);
   }
+
+  let form1 = document.getElementById("form1");
+  form1.addEventListener('submit', onSubmit);
+}
+
+function onSubmit(e){
+  e.preventDefault();
+
+  let searchFilter = document.getElementById("search-filter");
+  if(searchFilter.value == "0") window.location.replace("HomeSearchLittleWoman.html");
+  else window.location.replace("HomeSearchRachelHartman.html");
 }
 
 function onCardClick(e){
-  let badge = document.getElementsByClassName("badge")[0];
-  console.log(badge);
-  badge.style.setProperty('--num', "10");
+  // let badge = document.getElementsByClassName("badge")[0];
+  // console.log(badge);
+  // badge.style.setProperty('--num', "10");
+  document.getElementById('id01').style.display='block';
 }
 
 function onSortChanged(){
