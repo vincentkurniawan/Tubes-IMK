@@ -40,6 +40,7 @@ input{
     padding-left: 10%;
     padding-right: 10%;
     border-radius: 7px;
+    transition: 300ms;
 }
 
 .submit-button:hover{
@@ -52,9 +53,34 @@ input{
 }
 
 .contact-link{
-    text-decoration: none;
     margin-right: 9%;
+    transition: 300ms;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
 }
 .contact-link:hover{
-    text-decoration: underline;
+    border-color: black;
+}
+
+input {
+    transition: 200ms;
+}
+
+input:focus{
+    border: 2px solid #00A3FF;
+    margin: -1px;
+}
+
+#email-warning, #pass-warning{
+    margin-top: 5px;
+    color: red;
+}
+
+
+.border-color-normal {
+    border: 1px solid black;
+}
+
+.border-color-error {
+    border: 1px solid red;
 }
