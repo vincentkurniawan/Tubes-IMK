@@ -105,15 +105,15 @@
 
   <!--Catalog-->
   <div id="catalog" class="catalog">
-    <form id="form1">
+    <form>
       <div class="searchbar box-shadow">
-        <select id="search-filter" class="search-by textbox">
-          <option value="0">Title</option>
-          <option value="1">Author</option>
-          <option value="2">ISBN</option>
+        <select class="search-by textbox">
+          <option>Title</option>
+          <option selected>Author</option>
+          <option>ISBN</option>
         </select>
         <div style="background-color: #C4C4C4; width: 2px; margin: 5px 5px 5px 10px;"></div>
-        <input type="text" class="textbox" style="width: 100%; padding-left: 10px;" placeholder="Search by book's title">
+        <input type="text" class="textbox" style="width: 100%; padding-left: 10px;" placeholder="Rachel Hartman">
         <a href="HomeSearchLittleWoman.html" style="margin-right: 10px;"><i class="fa fa-search" style="color:#1DD2A2"></i></a>
       </div>
     </form>
@@ -132,111 +132,6 @@
     </div>
   
     <div class="books">
-      <!--Buku Pertama-->
-      <div class="catalog-card cc w3-hover-shadow">
-        <img src="../images/books_cover/1.png">
-        <div class="content">
-          <div class="header">
-            <p class="title">Little Woman</p>
-            <i class="fa fa-plus-circle fa-lg plus" aria-hidden="true" style="color:#159674"></i>
-          </div>
-          <p class="author">by Louisa May Alcott</p>
-          <p class="isbn">ISBN : 7445464385255</p>
-          <p class="synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum nisl ex, ac faucibus purus porta non. Pellentesque sit amet tellus posuere, pharetra lectus a, semper magna. Vivamus ut metus massa. Proin consectetur purus quam, in laoreet tellus facilisis quis. Suspendisse in sapien placerat.</p>
-          <div class="info">
-            <div class="rating">
-              <img src="../images/star.png">
-              <p style="margin: 0 0 0 3px">4.95/5</p>
-            </div>
-            <p class="price">Rp. 129.000</p>
-          </div>
-        </div>
-      </div>
-
-      <!--Buku Kedua-->
-      <div class="catalog-card w3-hover-shadow cc">
-        <img src="../images/books_cover/2.png">
-        <div class="content">
-          <div class="header">
-            <p class="title">Thousand Years To Wait</p>
-            <i class="fa fa-plus-circle fa-lg plus" aria-hidden="true" style="color:#159674"></i>
-          </div>
-          <p class="author">by L. Ryan Storms</p>
-          <p class="isbn">ISBN : 9385454484122</p>
-          <p class="synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum nisl ex, ac faucibus purus porta non. Pellentesque sit amet tellus posuere, pharetra lectus a, semper magna. Vivamus ut metus massa. Proin consectetur purus quam, in laoreet tellus facilisis quis. Suspendisse in sapien placerat.</p>
-          <div class="info">
-            <div class="rating">
-              <img src="../images/star.png">
-              <p style="margin: 0 0 0 3px">4.92/5</p>
-            </div>
-            <p class="price">Rp. 79.000</p>
-          </div>
-        </div>
-      </div>
-
-      <!--Buku Ketiga-->
-      <div class="catalog-card w3-hover-shadow cc">
-        <img src="../images/books_cover/3.png">
-        <div class="content">
-          <div class="header">
-            <p class="title">Anya And The Nightingale</p>
-            <i class="fa fa-plus-circle fa-lg plus" aria-hidden="true" style="color:#159674"></i>
-          </div>
-          <p class="author">by Sofiya Paternack</p>
-          <p class="isbn">ISBN : 8485463385489</p>
-          <p class="synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum nisl ex, ac faucibus purus porta non. Pellentesque sit amet tellus posuere, pharetra lectus a, semper magna. Vivamus ut metus massa. Proin consectetur purus quam, in laoreet tellus facilisis quis. Suspendisse in sapien placerat.</p>
-          <div class="info">
-            <div class="rating">
-              <img src="../images/star.png">
-              <p style="margin: 0 0 0 3px">4.85/5</p>
-            </div>
-            <p class="price">Rp. 93.500</p>
-          </div>
-        </div>
-      </div>
-
-      <!--Buku Keempat-->
-      <div class="catalog-card w3-hover-shadow cc">
-        <img src="../images/books_cover/4.png">
-        <div class="content">
-          <div class="header">
-            <p class="title">Bruja Born</p>
-            <i class="fa fa-plus-circle fa-lg plus" aria-hidden="true" style="color:#159674"></i>
-          </div>
-          <p class="author">by Zoraida Cordova</p>
-          <p class="isbn">ISBN : 8385462419255</p>
-          <p class="synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum nisl ex, ac faucibus purus porta non. Pellentesque sit amet tellus posuere, pharetra lectus a, semper magna. Vivamus ut metus massa. Proin consectetur purus quam, in laoreet tellus facilisis quis. Suspendisse in sapien placerat.</p>
-          <div class="info">
-            <div class="rating">
-              <img src="../images/star.png">
-              <p style="margin: 0 0 0 3px">4.82/5</p>
-            </div>
-            <p class="price">Rp. 109.000</p>
-          </div>
-        </div>
-      </div>
-
-      <!--Buku Kelima-->
-      <div class="catalog-card w3-hover-shadow cc">
-        <img src="../images/books_cover/5.png">
-        <div class="content">
-          <div class="header">
-            <p class="title">All Children Grow Up Except One : Lost Boy</p>
-            <i class="fa fa-plus-circle fa-lg plus" aria-hidden="true" style="color:#159674"></i>
-          </div>
-          <p class="author">by Christina Henry</p>
-          <p class="isbn">ISBN : 9524463319111</p>
-          <p class="synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum nisl ex, ac faucibus purus porta non. Pellentesque sit amet tellus posuere, pharetra lectus a, semper magna. Vivamus ut metus massa. Proin consectetur purus quam, in laoreet tellus facilisis quis. Suspendisse in sapien placerat.</p>
-          <div class="info">
-            <div class="rating">
-              <img src="../images/star.png">
-              <p style="margin: 0 0 0 3px">4.80/5</p>
-            </div>
-            <p class="price">Rp. 69.000</p>
-          </div>
-        </div>
-      </div>
-
       <!--Buku Keenam-->
       <div class="catalog-card w3-hover-shadow cc">
         <img src="../images/books_cover/7.png">
