@@ -47,7 +47,7 @@
                     <img src="/images/guarantee.gif">
                     <label>SAFETY</label>
                 </div>
-                <div class="topics-card" id="payment">
+                <div class="topics-card current-card">
                     <img src="/images/payment.gif">
                     <label>PAYMENT</label>
                 </div>
@@ -58,7 +58,7 @@
             </div>
 
             <!-- popular articles accordion -->
-            <h1 class="fs-36 fw-700 margin-top-32">Frequently Asked Questions</h1>
+            <h1 class="fs-36 fw-700 margin-top-32">Frequently Asked Payment Questions</h1>
             <!-- <div class="accordion-container margin-top-32">
                 <div onclick = "myFunction('dd-content-1')" class="accordion-item w3-button w100 w3-theme w3-hover-theme fs-24">Articles 1<i class="accordion-item-icon fa fa-caret-down"></i></div>
                 <div id = "dd-content-1" class="accordion-dropdown-content w3-bar hide">
@@ -93,18 +93,18 @@
                 </details>
                 <details>
                     <summary>
-                        Can I return or exchange a product that has been purchased?
+                        Do you sell gift cards?
                     </summary>
                     <div>
-                        <code>Sorry</code>, books that have been purchased <code>cannot be exchanged</code>. So make sure your purchase before buying.
+                        <code>Sorry</code>, at this time we <code>do not provide</code> gift card services.
                     </div>
                 </details>
                 <details>
                     <summary>
-                        Can i sell my book in your shop?
+                        Do you provide cash on delivery payment methods?
                     </summary>
                     <div>
-                        <code>Yes</code>, you can sell your books in our shop. You can send an email to <code>johnbooks.cs@gmail.com</code> regarding the book you are going to sell.
+                        <code>Sorry</code>, at this time we <code>do not provide</code> cash on delivery payment services.
                     </div>
                 </details>
                 <details>
@@ -140,9 +140,14 @@
         </footer>
 
         <script defer>
-            document.getElementById('payment').addEventListener('click', function() {
-                location.href = 'faq-payment.html'
-            }, false);
+            function myFunction(id) {
+                let x = document.getElementById(id);
+                if (x.className.indexOf("show") == -1) {
+                    x.className += " show";
+                } else { 
+                    x.className = x.className.replace(" show", "");
+                }
+            }
         </script>
     </body>
 </html>

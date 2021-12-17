@@ -27,11 +27,15 @@ body {
     width: 100%;
     height: 40%;
     overflow: hidden;
+    background: url(../images/walp4.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 40%;
+    
 }
 
 .header-search-bar img {
-    position:absolute;
     width: 100%;
+    position:absolute;
 }
 
 
@@ -87,9 +91,26 @@ body {
     width: 20%;
     height: 200px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 1px black;
+    transition: 0.2s;
+}
+
+.topics-card img {
+    width: 20%;
+}
+
+.topics-card label {
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 2rem;
 }
 
 .topics-card:hover {
+    box-shadow: 10px 12px #1DD2A2;
     cursor: pointer;
 }
 
@@ -128,4 +149,97 @@ body {
     cursor: pointer;
     text-decoration: none;
     background-color: rgb(223, 223, 223) !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+details div {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 1.5em;
+    font-size: 1.65rem;
+}
+
+details div > * + * {
+    margin-top: 1.5em;
+}
+
+details + details {
+    margin-top: .5rem;
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    border: 1px solid #000;
+    padding: .75em 1em;
+    cursor: pointer;
+    position: relative;
+    padding-left: calc(1.75rem + .75rem + .75rem);
+    font-size: 2rem;
+}
+
+summary:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: .75rem;
+    content: "↓";
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #000;
+    color: #FFF;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+details[open] summary {
+    background-color: #7aecce;
+}
+
+details[open] summary:before {
+    content: "↑";
+}
+
+summary {
+    transition: 0.2s;
+}
+
+summary:hover {
+    /* background-color: #eee; */
+    background-color: #7aecce;
+}
+
+code {
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.accordions {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.current-card {
+    box-shadow: 10px 12px #1DD2A2;
 }
