@@ -128,3 +128,9 @@ hr {
 .justify_space {
 	justify-content: space-between;
 }
+
+#book_item1, #book_item2{
+	width: 100%;
+	display: flex;
+	margin-left: 5%;
+}
