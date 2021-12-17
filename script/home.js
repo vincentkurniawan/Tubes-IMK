@@ -85,6 +85,9 @@ function onSubmit(e){
   e.preventDefault();
 
   let searchFilter = document.getElementById("search-filter");
+  let searchTextbox = document.getElementById("t-search");
+  console.log(searchTextbox);
+  if(searchTextbox.value == "") window.location.replace("Home.html");
   if(searchFilter.value == "0") window.location.replace("HomeSearchLittleWoman.html");
   else window.location.replace("HomeSearchRachelHartman.html");
 }

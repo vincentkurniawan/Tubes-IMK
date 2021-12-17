@@ -27,34 +27,34 @@
 			</div>
 
 			<!-- Item Buku -->
-			<div class="flex-center" id="book_item1">
+			<div class="" id="book_item1">
 				<div class="flex-row margin">
-					<input type="checkbox" name="" class="w3-check checkbox">
-					<img src="../images/books_cover/14.png" class="cover w3-margin w3-round-xlarge w10">
+					<!-- <input type="checkbox" name="" class="w3-check checkbox"> -->
+					<img src="../images/books_cover/1.png" class="cover w3-margin w3-round-xlarge w10" style="width: 11.5%; margin-left: 2%; display: flex;">
 
 					<!-- Keterangan Buku -->
-					<div class="w3-margin-left w3-margin-right flex-center flex-col">
+					<div class="w3-margin-left w3-margin-right flex-col w50" style="justify-content: center; width: 43%; display: flex;">
 						<div class="flex-col">
-							<p class="bold w3-xlarge w3-margin-0">Before We Disappear</p>
-							<p class="w3-medium w3-margin-0">by Shaun David Hutchinson</p>
-							<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Soft Cover - 1 Pcs</p>
-							<p class="w3-medium bold w3-margin-0 w3-text-dark-grey" id="pricePerPc">Rp 60.000</p> <!-- value blm jalan -->
+							<p class="bold w3-xlarge w3-margin-0">Little Woman</p>
+							<p class="w3-medium w3-margin-0">by Louisa May Alcott</p>
+							<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Hard Cover - 1 Pcs</p>
+							<p class="w3-medium bold w3-margin-0 w3-text-dark-grey" id="pricePerPc">Rp 129.000</p>
 						</div>
 					</div>
 
 					<!-- Tombol hapus -->
-					<div class="bold w15 del" onclick="showDeleteModal(1)">
+					<div class="bold w15 del" onclick="showDeleteModal(1)" style="display: flex; margin-left: 16%;">
 						<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn"> Delete</span></i>
 					</div>
 
 					<!-- Tombol tambah dan harga -->
-					<div class="w20 center">
-						<p class="w3-text-theme-cart w3-large bold flex-center" id="subtotal1">Rp 60.000,00</p>
+					<div class="w20 center" style="display: flex; flex-direction: column; margin-right: -10%;">
+						<p class="w3-text-theme-cart w3-large bold flex-center" id="subtotal1">Rp 129.000,00</p>
 						<!-- button tambah kurang -->
 						<div class="flex-row flex-center">
-							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="minQty" onclick="min(60000, 1)">-</button>
+							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="minQty" onclick="min(129000, 1)">-</button>
 							<p value="1" id="qty_book1" class="bold w3-margin flex-center">1</p>
-							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="addQty2" onclick="plus(60000, 1)">+</button>
+							<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="addQty2" onclick="plus(129000, 1)">+</button>
 						</div>
 					</div>
 				</div>
@@ -63,18 +63,18 @@
 			<hr id="pembatasCart">
 
 			<!-- Item Buku 2 -->
-			<div class="flex-center" id="book_item2">
+			<div class="" id="book_item2">
 				<div class="flex-row margin">
-				<input type="checkbox" name="" class="w3-check checkbox">
-				<img src="../images/books_cover/6.png" class="cover w3-margin w3-round-xlarge w10">
+				<!-- <input type="checkbox" name="" class="w3-check checkbox"> -->
+				<img src="../images/books_cover/2.png" class="cover w3-margin w3-round-xlarge w10">
 
 				<!-- Keterangan Buku -->
-				<div class="w3-margin-left w3-margin-right flex-center flex-col">
+				<div class="w3-margin-right flex-col w50" style="justify-content: center; margin-left: 2%;">
 					<div class="flex-col">
-						<p class="bold w3-xlarge w3-margin-0">Not Here to Be Liked</p>
-						<p class="w3-medium w3-margin-0">by Michelle Quach</p>
-						<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Hard Cover - 1 Pcs</p>
-						<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 100.000</p>
+						<p class="bold w3-xlarge w3-margin-0">Thousand Years To Wait</p>
+						<p class="w3-medium w3-margin-0">by Thousand Years To Wait</p>
+						<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Soft Cover - 1 Pcs</p>
+						<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 79.000</p>
 					</div>
 				</div>
 
@@ -85,12 +85,12 @@
 
 				<!-- Tombol tambah dan harga -->
 				<div class="w20 center">
-					<p class="w3-text-theme-cart w3-large bold flex-center" id="subtotal2">Rp 100.000,00</p>
+					<p class="w3-text-theme-cart w3-large bold flex-center" id="subtotal2">Rp 79.000,00</p>
 					<!-- button tambah kurang -->
 					<div class="flex-row flex-center">
-						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="minQty2" onclick="min(100000, 2)">-</button>
+						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="minQty2" onclick="min(79000, 2)">-</button>
 						<p value="1" id="qty_book2" class="bold w3-margin flex-center">1</p>
-						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="addQty" onclick="plus(100000, 2)">+</button>
+						<button class="btnPlusMin w3-padding w3-margin w3-theme-cart w3-hover-theme-light-green" id="addQty" onclick="plus(79000, 2)">+</button>
 					</div>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 
 			<div class="w3-theme-cart round-bottom flex-row bold w3-padding justify_space w3-xlarge">
 				<p>Subtotal</p>
-				<p id="subtotal_all">Rp 205.000,00</p>
+				<p id="subtotal_all">Rp 208.000,00</p>
 			</div>
 		</div>    
 		<!-- Button Order dan Checkout -->
@@ -149,12 +149,12 @@
 					</div>
 					<div class="flex-col w100" >
 						<div class="flex-row w100" style="justify-content: space-between; margin-bottom: 3%;" id="book1_item_summary">
-							<img src="../images/books_cover/14.png" class="cover w3-round-medium w15">
+							<img src="../images/books_cover/1.png" class="cover w3-round-medium w15">
 							<div class="flex-col">
-								<h2 class="fs-16" style="font-weight: bolder; margin:0px">Before We Disappear</h2>
-								<p>by Shaun David Hutchinson</p>
+								<h2 class="fs-16" style="font-weight: bolder; margin:0px">Little Woman</h2>
+								<p>by Louisa May Alcott</p>
 								<br>
-								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 60.000 / pcs</p>
+								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 129.000 / pcs</p>
 							</div>
 							<div class="flex-col flex-center">
 								<p class="w3-large w3-text-theme-cart w3-large bold" id="modal_sub1"></p>
@@ -163,12 +163,12 @@
 						</div>
 						<hr style="width: 100%; border: 1px solid gray;">
 						<div class="flex-row w100" style="justify-content: space-between; margin-top: 3%; margin-bottom: 3%;" id="book2_item_summary">
-							<img src="../images/books_cover/6.png" class="cover w3-round-medium w15">
+							<img src="../images/books_cover/2.png" class="cover w3-round-medium w15">
 							<div class="flex-col" style=" margin-left: -10%;">
-								<h2 class="fs-16" style="font-weight: bolder;">Not Here to Be Liked</h2>
-								<p>by Michelle Quach</p>
+								<h2 class="fs-16" style="font-weight: bolder;">Thousand Years To Wait</h2>
+								<p>by L. Ryan Storms</p>
 								<br>
-								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 100.000 / pcs</p>
+								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 79.000 / pcs</p>
 							</div>
 							<div class="flex-col flex-center">
 								<p class="w3-large w3-text-theme-cart w3-large bold" id="modal_sub2"></p>
@@ -178,16 +178,16 @@
 						<hr style="width: 100%; border: 1px solid gray;" class="w3-margin-bottom">
 						<div class="flex-row justify_space">
 							<span>Subtotal</span>
-							<span class="w3-medium bold" id="modal_subtotal">Rp 205.000</span>
+							<span class="w3-medium bold" id="modal_subtotal">Rp 208.000</span>
 						</div>
 						<div class="flex-row justify_space">
 							<span>Tax (10%)</span>
-							<span class="w3-medium bold" id="tax">Rp 20.500</span>
+							<span class="w3-medium bold" id="tax">Rp 20.800</span>
 						</div>
 						<hr style="width: 100%;">
 						<div class="flex-row justify_space">
 							<span class="w3-medium bold">TOTAL</span>
-							<span class="w3-text-theme-cart w3-medium bold" id="total">Rp 225.500</span>
+							<span class="w3-text-theme-cart w3-medium bold" id="total">Rp 228.800</span>
 						</div>
 
 						<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large bold">ORDER</button>
@@ -201,11 +201,11 @@
 			let count1 = 1;
 			let count2 = 1;
 			let qty, subtotal;
-			let tempTotal = 60000+100000;
+			let tempTotal = 129000+79000;
 			let subtotal_all = document.getElementById("subtotal_all");
 			subtotal_all.innerHTML = rupiah(tempTotal);
-			let sub1 = 60000;
-			let sub2 = 100000;
+			let sub1 = 129000;
+			let sub2 = 79000;
 			
 			function plus(pricePcs, id){
 				if(id == 1){
@@ -215,6 +215,8 @@
 					qty.value = count1;
 					qty.innerHTML = count1;
 					sub1 += pricePcs;
+
+					//console.log("sub 1 stlh plus : " + sub1);
 					subtotal.innerHTML = rupiah(sub1);
 					// ganti warna button
 					// if(count1 > 1){
@@ -238,7 +240,8 @@
 					// 	btnMin.classList.add(" w3-theme-cart");
 					// }
 				}
-				tempTotal += pricePcs;
+				tempTotal = sub1 + sub2;
+				//console.log("Plus -> sub 1 : " + sub1 + " sub 2 : " + sub2 + " tempTotal : " + tempTotal);
 				update(tempTotal);
 			}
 
@@ -251,8 +254,7 @@
 						qty.value = count1;
 						qty.innerHTML = count1;
 						subtotal.innerHTML = rupiah(count1*pricePcs);
-						tempTotal -= pricePcs;
-						
+						sub1 -= pricePcs;
 					}
 					// ganti warna button
 					// if(count1 == 1){
@@ -269,7 +271,7 @@
 						qty.value = count2;
 						qty.innerHTML = count2;
 						subtotal.innerHTML = rupiah(count2*pricePcs);
-						tempTotal -= pricePcs;
+						sub2 -= pricePcs;
 					}
 					// ganti warna button
 					// if(count1 == 1){
@@ -278,6 +280,8 @@
 					// 	btnMin.classList.add(" w3-theme-light-green")
 					// }
 				}
+				tempTotal = sub1 + sub2;
+				// console.log("Min -> sub 1 : " + sub1 + " sub 2 : " + sub2 + " tempTotal : " + tempTotal);
 				update(tempTotal);
 			}
 
@@ -294,6 +298,7 @@
 			//update subtotal
 			function update(tempTotal){
 				subtotal_all.innerHTML = rupiah(tempTotal);
+				//console.log("tempTotal update : " + tempTotal);
 			}
 
 			//show modal order summary
@@ -317,7 +322,6 @@
 				let tax = document.getElementById("tax");
 				let taxCount = tempTotal*0.1;
 				tax.innerHTML = rupiah(taxCount);
-				// tax.innerHTML = "test";
 				
 				let total = document.getElementById("total");
 				let totalCount = tempTotal + taxCount;
@@ -344,14 +348,16 @@
 			//delete book item
 			function deleteBook(){
 				let book, bookSummary;
+				//console.log("tempIdBook = " + tempIdBook);
+				//console.log("tempTotal = " + tempTotal);
 
 				if(tempIdBook == 1){ //hapus buku 1
 					book = document.getElementById('book_item1');
 					book.style.display = 'none';
 					closeDeleteModal();
-					tempTotal -= sub1; 
 					sub1 = 0;
-					update(tempTotal);
+
+					//console.log("sub1 now = " + sub1);
 
 					//hapus item dari order summary modal
 					bookSummary = document.getElementById('book1_item_summary');
@@ -361,15 +367,18 @@
 					book = document.getElementById('book_item2');
 					book.style.display = 'none';
 					closeDeleteModal();
-					tempTotal -= sub2;
 					sub2 = 0;
-					update(tempTotal);
+
+					//console.log("sub2 now = " + sub2);
 
 					//hapus item dari order summary modal
 					bookSummary = document.getElementById('book2_item_summary');
 					bookSummary.style.display = 'none';
 				}
 				document.getElementById('pembatasCart').style.display = 'none';
+				//console.log("sub 1 : " + sub1 + " sub 2 : " + sub2);
+				tempTotal = sub1 + sub2;
+				update(tempTotal);
 			}
 
 			window.onclick = function(event) {
