@@ -23,7 +23,7 @@
 
 		<div class="cart w3-card w3-border w3-border-grey w3-round-xlarge flex-col">
 			<div class="bold w3-xlarge margin">
-				<i class="fa fa-shopping-cart"></i> My Cart
+				<i class="fa fa-shopping-cart"></i> Keranjang
 			</div>
 
 			<!-- Item Buku -->
@@ -36,7 +36,7 @@
 					<div class="w3-margin-left w3-margin-right flex-col w50" style="justify-content: center; width: 43%; display: flex;">
 						<div class="flex-col">
 							<p class="bold w3-xlarge w3-margin-0">Little Woman</p>
-							<p class="w3-medium w3-margin-0">by Louisa May Alcott</p>
+							<p class="w3-medium w3-margin-0">oleh Louisa May Alcott</p>
 							<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Hard Cover - 1 Pcs</p>
 							<p class="w3-medium bold w3-margin-0 w3-text-dark-grey" id="pricePerPc">Rp 129.000</p>
 						</div>
@@ -44,7 +44,7 @@
 
 					<!-- Tombol hapus -->
 					<div class="bold w15 del" onclick="showDeleteModal(1)" style="display: flex; margin-left: 16%;">
-						<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn"> Delete</span></i>
+						<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn"> Hapus</span></i>
 					</div>
 
 					<!-- Tombol tambah dan harga -->
@@ -72,7 +72,7 @@
 				<div class="w3-margin-right flex-col w50" style="justify-content: center; margin-left: 2%;">
 					<div class="flex-col">
 						<p class="bold w3-xlarge w3-margin-0">Thousand Years To Wait</p>
-						<p class="w3-medium w3-margin-0">by Thousand Years To Wait</p>
+						<p class="w3-medium w3-margin-0">oleh Thousand Years To Wait</p>
 						<p class="w3-small w3-margin-0 w3-margin-top w3-text-grey">Soft Cover - 1 Pcs</p>
 						<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 79.000</p>
 					</div>
@@ -80,7 +80,7 @@
 
 				<!-- Tombol hapus -->
 				<div class="bold w15 del" onclick="showDeleteModal(2)">
-					<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn"> Delete</span></i>
+					<i class="fa fa-trash-o bold w3-medium w3-text-dark-grey fs-16 w3-hover-text-red"><span class="delete_btn"> Hapus</span></i>
 				</div>
 
 				<!-- Tombol tambah dan harga -->
@@ -103,14 +103,14 @@
 		</div>    
 		<!-- Button Order dan Checkout -->
 		<div class="flex-center bold">
-			<a href="Home.html" class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large" style="text-decoration: none;">View Catalog</a>
-			<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large" onclick="showSummaryModal()">Checkout</button>
+			<a href="Home.html" class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large" style="text-decoration: none;">Lihat Katalog</a>
+			<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large" onclick="showSummaryModal()">Pesan</button>
 		</div>    
 
 		<div id="google_translate_element"></div>
 		<!-- footer -->
         <footer class="footer" style="">
-            <h2 class="fs-14 fw-700">Our Contact:</h2>
+            <h2 class="fs-14 fw-700">Kontak:</h2>
             <a></a>
             <a href="https://www.facebook.com/" target="blank" class="fs-14">Facebook</a>
             <h2 class="fs-14">|</h2>
@@ -118,7 +118,7 @@
             <h2 class="fs-14">|</h2>
             <a href="https://www.twitter.com/" target="blank" class="fs-14">Twitter</a>
             <h2 class="fs-14">|</h2>
-            <h2 class="fs-14">Have questions? Please visit our <a href="faq.html" class="fs-16">FAQ</a></h2>
+            <h2 class="fs-14">Ada pertanyaan? Kunjungi halaman <a href="faq.html" class="fs-16">FAQ</a></h2>
         </footer>
 
 		<!-- modals /pop-up delete item dari cart -->
@@ -128,11 +128,11 @@
 				<div class="w3-container">
 					<span onclick="closeDeleteModal()" class="w3-button w3-display-topright fs-32">&times;</span>
 					<div class="w3-margin-bottom w100 flex-center"> 
-						<h1 class="fs-32 w3-center">Are you sure to delete this item?</h1>
+						<h1 class="fs-32 w3-center">Apa anda yakin untuk menghapus buku ini dari keranjang?</h1>
 					</div>
 					<form class="flex-row w100" >
-						<a href="#" class="w3-button fs-16 w50 yesno_btn w3-hover-pale-green w3-margin bold" style="background-color: #2A973C;" onclick="deleteBook()">Yes</a>
-						<a href="#" class="w3-button fs-16 w50 w3-margin-right yesno_btn w3-hover-pale-red w3-margin bold" style="background-color: #C30202" onclick="closeDeleteModal()">No</a>
+						<a href="#" class="w3-button fs-16 w50 yesno_btn w3-hover-pale-green w3-margin bold" style="background-color: #2A973C;" onclick="deleteBook()">Ya</a>
+						<a href="#" class="w3-button fs-16 w50 w3-margin-right yesno_btn w3-hover-pale-red w3-margin bold" style="background-color: #C30202" onclick="closeDeleteModal()">Tidak</a>
 					</form>
 				</div>
 			  </div>
@@ -146,14 +146,14 @@
 				<div class="w3-container">
 					<span onclick="closeModal()" class="w3-button w3-display-topright fs-32">&times;</span>
 					<div class="w3-margin-bottom w100"> 
-						<h1 class="fs-16" style="font-weight:bolder;">Order Summary</h1>
+						<h1 class="fs-16" style="font-weight:bolder;">Ringkasan Pesanan</h1>
 					</div>
 					<div class="flex-col w100" >
 						<div class="flex-row w100" style="justify-content: space-between; margin-bottom: 3%;" id="book1_item_summary">
 							<img src="../images/books_cover/1.png" class="cover w3-round-medium w15">
 							<div class="flex-col">
 								<h2 class="fs-16" style="font-weight: bolder; margin:0px">Little Woman</h2>
-								<p>by Louisa May Alcott</p>
+								<p>oleh Louisa May Alcott</p>
 								<br>
 								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 129.000 / pcs</p>
 							</div>
@@ -167,7 +167,7 @@
 							<img src="../images/books_cover/2.png" class="cover w3-round-medium w15">
 							<div class="flex-col" style=" margin-left: -10%;">
 								<h2 class="fs-16" style="font-weight: bolder;">Thousand Years To Wait</h2>
-								<p>by L. Ryan Storms</p>
+								<p>oleh L. Ryan Storms</p>
 								<br>
 								<p class="w3-medium bold w3-margin-0 w3-text-dark-grey">Rp 79.000 / pcs</p>
 							</div>
@@ -182,7 +182,7 @@
 							<span class="w3-medium bold" id="modal_subtotal">Rp 208.000</span>
 						</div>
 						<div class="flex-row justify_space">
-							<span>Tax (10%)</span>
+							<span>Pajak (10%)</span>
 							<span class="w3-medium bold" id="tax">Rp 20.800</span>
 						</div>
 						<hr style="width: 100%;">
@@ -191,7 +191,7 @@
 							<span class="w3-text-theme-cart w3-medium bold" id="total">Rp 228.800</span>
 						</div>
 
-						<a href="Home.html" class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large bold" style="text-decoration: none; text-align: center;">ORDER</a>
+						<button class="w3-theme-cart w3-round-xlarge w3-padding w3-margin btn w3-large bold">PESAN</button>
 					</div>
 				</div>
 			  </div>

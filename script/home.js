@@ -7,14 +7,14 @@ var books=[
   "price":"Rp. 129.000",
   "src":"../images/books_cover/1.png"
 },{
-  "title":"Thousand Years To Wait",
+  "title":"Thousand Years to Wait",
   "author":"L. Ryan Storms",
   "isbn":"9385454484122",
   "rating":4.92,
   "price":"Rp. 79.000",
   "src":"../images/books_cover/2.png"
 },{
-  "title":"Anya And The Nightingale",
+  "title":"Anya and The Nightingale",
   "author":"Sofiya Paternack",
   "isbn":"8485463385489",
   "rating":4.85,
@@ -35,7 +35,7 @@ var books=[
   "price":"Rp. 69.000",
   "src":"../images/books_cover/5.png"
 },{
-  "title":"Tess Of The Road",
+  "title":"Tess of The Road",
   "author":"Rachel Hartman",
   "isbn":"9780385685900",
   "rating":4.78,
