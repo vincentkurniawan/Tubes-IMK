@@ -55,11 +55,11 @@ input{
 .contact-link{
     margin-right: 9%;
     transition: 300ms;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     text-decoration: none;
 }
 .contact-link:hover{
-    border-color: black;
+    border-color: #1DD2A2;
 }
 
 input {

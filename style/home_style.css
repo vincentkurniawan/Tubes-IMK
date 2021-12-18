@@ -207,7 +207,6 @@ body{
 }
 
 .pagination{
-  letter-spacing: 10px;
   text-align: center;
   margin-top: 30px;
 }
@@ -272,4 +271,14 @@ i {
 .footer a:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.paginations{
+  transition: 300ms;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+.paginations:hover{
+  cursor: pointer;
+  border-color: #1DD2A2;
 }

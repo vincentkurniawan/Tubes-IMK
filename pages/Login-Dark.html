@@ -29,45 +29,45 @@
             </div>
 
             <!-- right content -->
-            <div class="flex-col wh50100" style="align-items: center;">
+            <div class="flex-col wh50100" style="align-items: center; background-color: #131722;">
                 <!-- right - middle content -->
                 <div id="right-middle" class="flex-col">
                     <div class="w3-margin-bottom"> 
-                        <h1 class="fs-32">Masuk</h1>
+                        <h1 class="fs-32" style="color: #fff;">Sign In</h1>
                     </div>
                     <form class="flex-col">
-                        <label for="login-email" class="fs-16">Email</label>
-                        <input type="text" id="login-email" >
+                        <label for="login-email" class="fs-16" style="color: #fff;">Email</label>
+                        <input type="text" id="login-email" style="border-color: #fff; background-color: #131722; border-width: 2px; color: #fff;">
                         <label class="fs-12 w3-hide" id="email-warning">
                             <i class="fa fa-exclamation-circle"></i>
-                            <span id="email-warn-text">Masukkan email</span>
+                            <span id="email-warn-text" style="color: #fff;">Enter your email</span>
                         </label>
 
-                        <label for="login-password" class="w3-margin-top fs-16">Kata Sandi</label>
-                        <input type="password" id="login-password">
+                        <label for="login-password" class="w3-margin-top fs-16" style="color: #fff;">Password</label>
+                        <input type="password" id="login-password" style="border-color: #fff; background-color: #131722; border-width: 2px; color: #fff;">
                         <label class="fs-12 w3-hide" id="pass-warning">
                             <i class="fa fa-exclamation-circle"></i> 
-                            <span id="pass-warn-text">Masukkan kata sandi</span>
+                            <span id="pass-warn-text" style="color: #fff;">Enter your password</span>
                         </label>
 
                         <div class="flex-row w3-margin-top w100">
                             <div class="flex-row w50" style="align-items: center; justify-content: flex-start;">
-                                <a href="#" style="color: #00A3FF" class="fs-14" onclick="document.getElementById('modal_forgot').style.display='block'">Lupa kata sandi?</a>
+                                <a href="#" style="color: #00A3FF" class="fs-14" onclick="document.getElementById('modal_forgot').style.display='block'">Forgot Password?</a>
                             </div>
                             <div class="flex-row w50" style="align-items: flex-end; justify-content: flex-end;">
-                                <a href="Home.html" class="submit-button fs-16" onclick="validasiLogin(event)">Masuk</a>
+                                <a href="Home.html" class="submit-button fs-16" onclick="validasiLogin(event)">Sign In</a>
                             </div>
                         </div>
                     </form>
                 </div>
                 <!-- right - bottom content -->
-                <div id="right-bottom" class="flex-row">
+                <div id="right-bottom" class="flex-row" style="color: #fff;">
                     <a href="faq.html" class="contact-link fs-14">FAQ</a>
                     <a href="https://www.facebook.com/" class="contact-link fs-14">Facebook</a>
                     <a href="https://www.instagram.com/" class="contact-link fs-14">Instagram</a>
                     <a href="https://www.twitter.com/" class="contact-link fs-14">Twitter</a>
-                    <a href="Login.html" class="contact-link fs-14">English</a>
-                    <a href="Login-ID-Dark.html" class="contact-link fs-14">Dark</a>
+                    <a href="Login-ID-Dark.html" class="contact-link fs-14">Indonesian</a>
+                    <a href="Login.html" class="contact-link fs-14">Light</a>
                 </div>
             </div>
 
@@ -78,15 +78,15 @@
                     <div class="w3-container">
                         <span onclick="document.getElementById('modal_forgot').style.display='none'" class="w3-button w3-display-topright fs-32">&times;</span>
                         <div class="w3-margin-bottom"> 
-                            <h1 class="fs-32">Atur Ulang Kata Sandi</h1>
+                            <h1 class="fs-32">Reset Password</h1>
                         </div>
                         <form class="flex-col w100">
                             <label for="login-email" class="fs-16">Email</label>
                             <input type="text" id="forgot-email">
-                            <span class="fs-12 w3-text-red" id="forgot-warn">Kami akan mengirimkan email untuk mengatur ulang kata sandi Anda.</span>
+                            <span class="fs-12 w3-text-red" id="forgot-warn">We will send an email to reset your password.</span>
 
                             <div class="flex-center" style="margin-top: 10%;">
-                                <a href="Login.html" class="submit-button fs-16" style="padding-top: 2%; padding-bottom: 2%;" onclick="validasiVerif(event)">Kirim</a> 
+                                <a href="Login.html" class="submit-button fs-16" style="padding-top: 2%; padding-bottom: 2%;" onclick="validasiVerif(event)">Submit</a> 
                             </div>
                         </form>
                     </div>
