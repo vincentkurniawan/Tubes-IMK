@@ -207,8 +207,7 @@ function onSubmit(e){
 
   let searchFilter = document.getElementById("search-filter");
   let searchTextbox = document.getElementById("t-search");
-  console.log(searchTextbox);
-  if(searchTextbox.value == "") window.location.replace("Home.html");
+  if(searchTextbox.value === "") window.location.replace("Home.html");
 
   if(searchFilter.value == "0") window.location.replace("HomeSearchLittleWoman.html");
   else if (searchFilter.value == "1") window.location.replace("HomeSearchRachelHartman.html");
