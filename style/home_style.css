@@ -258,14 +258,17 @@ i {
 }
 
 .footer h2 {
+  font-family: Montserrat;
   margin-right: 5px;
   font-size:12px;
 }
 
 .footer a {
+  font-family: Montserrat;
   text-decoration: none;
   color: #00A3FF;
   margin-right: 5px;
+  font-size:12px;
 }
 
 .footer a:hover {

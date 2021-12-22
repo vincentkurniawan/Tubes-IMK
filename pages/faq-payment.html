@@ -29,7 +29,7 @@
                 <h1 class="fs-42 fw-700 color-white">Hello, how can we help?</h1>
                 <div class="search-box">
                     <input class="search-input fs-16 color-brown" type="text" placeholder="Search John's Book Help">
-                    <i class="fa fa-search"></i>
+                    <i id="search" style="cursor: pointer;" class="fa fa-search"></i>
                 </div>
             </div>
         </div>
@@ -136,18 +136,13 @@
             <h2 class="fs-14">|</h2>
             <a href="https://www.twitter.com/" target="blank" class="fs-14">Twitter</a>
             <h2 class="fs-14">|</h2>
-            <h2 class="fs-14">Have questions? Please visit our <a href="faq.html" class="fs-16">FAQ</a></h2>
+            <h2 class="fs-14">Have questions? Please visit our <a href="faq.html" class="fs-14">FAQ</a></h2>
         </footer>
 
         <script defer>
-            function myFunction(id) {
-                let x = document.getElementById(id);
-                if (x.className.indexOf("show") == -1) {
-                    x.className += " show";
-                } else { 
-                    x.className = x.className.replace(" show", "");
-                }
-            }
+            document.getElementById('search').addEventListener('click', function() {
+                location.href = 'faq.html'
+            }, false);
         </script>
     </body>
 </html>
